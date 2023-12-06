@@ -68,22 +68,17 @@ for column in df_cognos.columns:
 #        'Minimum Binding Period From Date', 'Minimum Binding Period To Date',
 #        'Container Number', 'EQ Manufacture Date', 'Reefer Maker',
 #        'Reefer Model Number']
+df_looker.columns
+# LOOKER_COLUMNS=[]
+# not_keys= []
 
-not_keys= [
-    'Rates - Per Diem', 'Rates - Sublease Per Diem',
-    'Rates - Total Per Diem', 'On Hire Date', 'Lease Effective Start Date',
-    'Lease Effective Start Calendar Year Month', 'Lease Effective End Date',
-    'Lease Effective End Calendar Year Month', 'Build Down Fiscal Year',
-    'Minimum Binding Period From Date', 'Minimum Binding Period To Date'
-    ]
-
-keys_list = [x for x in list(LOOKER_TO_COGNOS.keys()) if x not in not_keys]
+# keys_list = [x for x in LOOKER_COLUMNS if x not in not_keys]
 
 
-compare = datacompy.Compare(
-    df_cognos, df_looker, 
-    join_columns=keys_list, df1_name='Cognos', df2_name='Looker')
-print(compare.report())
+# compare = datacompy.Compare(
+#     df_cognos, df_looker, 
+#     join_columns=keys_list, df1_name='Cognos', df2_name='Looker')
+# print(compare.report())
 
 
 
